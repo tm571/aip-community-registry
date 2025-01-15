@@ -2,20 +2,10 @@
 
 ## Submission Process
 
-1. **Submit Your Project Idea**
-    - Email your proposal to aip-community-registry@palantir.com
-    - Include:
-        - Project title
-        - Brief description
-        - Recording of Implementation
-
-2. **Review Process**
-    - For submissions Palantir accepts for inclusion in the AIP-Community Registry submitters will receive instructions for next steps.
-
-3. **Post-Approval Steps**
-    - Fork this repository
-    - Package your resources following the template structure
-    - Submit your contribution via pull request
+1. Fork this repository
+2. Package your resources following the template structure
+3. Submit your contribution via pull request
+4. We will review and approve as appropriate
 
 ## Project Requirements
 
