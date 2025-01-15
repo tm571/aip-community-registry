@@ -24,6 +24,7 @@ Community-built examples built with Palantir's AIP, showing practical implementa
 | 12 | [Peak Explorer](/Peak%20Explorer/) | A mobile app SDK to visualise nearby mountains, report conditions, see summarized reviews and track your ascents 🏔️ | George Cooper | 
 | 13 | [Fashion Assistant](/Fashion%20Assistant/) | A Computer Vision enabled SDK to suggest outfits by considering your current wardrobe contents, weather and personal preferences 👔 | Alexandre Calais | 
 | 14 | [OSDK Widget in Foundry](/OSDK%20Widget%20in%20Foundry/) | A tutorial for creating a custom widget in Workshop for third party libraries or other bespoke requirements 🖼️ | Matthew Steele | 
+| 15 | [Geocoding with Nominatim](/Geocoding%20with%20Nominatim%20and%20Compute%20Modules/) | A production ready package to geocode addresses in bulk and realtime using Nominatim and Compute Modules 🌍 | Joseph Chotard |
 
 
 ## Getting Started
