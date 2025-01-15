@@ -6,6 +6,8 @@ This is a simple geocoding service that uses the Nominatim API to convert addres
 
 It supports both real-time processing through a [compute module](https://www.palantir.com/docs/foundry/compute-modules/overview) as well as high scale batch processing through [Foundry spark sidecar transforms](https://www.palantir.com/docs/foundry/transforms-python/transforms-sidecar)
 
+All geocoding is done using [nominatim](https://nominatim.org/) which is a free and open-source geocoding service that is based on publicly available [OpenStreetMap data](https://www.openstreetmap.org/about). You can find more information about how nominatim works [here](https://nominatim.org/release-docs/latest/).
+
 ## Overview
 
 Nominatim traditionally takes a very long time to startup as it requires extracting a large osm file and hydrating a postgres database. 
