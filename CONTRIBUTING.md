@@ -13,10 +13,11 @@
 Your project must follow our standard template structure:
 ```
 /your-project-name/
-  /[optional] osdk_app     # SDK application files
-  /images                  # Screenshots and demos
-  README.md               # Project documentation
-  LICENSE                 # License information
+  /[optional] osdk_app                      # SDK application files
+  /images                                   # Screenshots and demos
+  [optional] project_file.zip               # Marketplace resource file 
+  README.md                                 # Project documentation
+  LICENSE                                   # License information
 ```
 
 ### Documentation Requirements
@@ -41,7 +42,7 @@ Your project must follow our standard template structure:
     - Follow the structure exactly
     - Include all required documentation
 
-2. **Package Your Resources**
+2. **Package Your Resources** (see [PACKAGING.md](PACKAGING.md))
     - Create marketplace bundle
     - Test installation process
     - Verify all dependencies are included
