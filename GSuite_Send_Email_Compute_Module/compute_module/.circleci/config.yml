@@ -1,0 +1,24 @@
+# CircleCI configuration file
+# This is a minimal configuration as the project currently doesn't require CI testing
+# but does require a a Circle CI config for each project
+version: 2.1
+
+jobs:
+  status-check:
+    docker:
+      - image: cimg/base:stable
+    steps:
+      - checkout
+      - run:
+          name: CI Status
+          command: |
+            echo "✓ Repository check complete"
+            echo "Note: This project currently has no test suite to run."
+            echo "This configuration exists to maintain CI pipeline health checks."
+            exit 0
+
+workflows:
+  version: 2
+  ci-health-check:
+    jobs:
+      - status-check
