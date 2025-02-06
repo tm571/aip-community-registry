@@ -1,6 +1,6 @@
 # CircleCI configuration file
 # This is a minimal configuration as the project currently doesn't require CI testing
-# but does require a a Circle CI config for each project
+# but does require a Circle CI config for each project
 version: 2.1
 
 jobs:
