@@ -12,6 +12,15 @@ Install project dependencies:
 npm install
 ```
 
+Setup environment variables:
+
+```sh
+npm run setup
+```
+
+Add `"@sarr-app-hackathon-project/sdk": "^0.2.0",` to dependancies in `package.json`
+
+
 Run the following command from the project root to start a local development server on `http://localhost:8080`:
 
 ```sh

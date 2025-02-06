@@ -85,6 +85,7 @@ This package includes an OSDK React application.
 
 3. **Configure your development environment**
    - Edit the `.env.code-workspaces`, `.env.development`, and `.env.production` to set the Foundry API URL and the Foundry CLIENT ID that you copied in the previous step
+      - Try using `npm run setup` and follow the instructions to populate everything you need to start developing locally.
       - To run locally, the `.env.development` configuration is needed and you will need to set the redirect URL to localhost:
       <br>
 
