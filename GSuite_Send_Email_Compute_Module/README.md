@@ -138,11 +138,7 @@
 
 ## Usage
 
-Whatever you call your namespace is how you import the module in code
-
-<img src="images/[Step%2019]%20Usage%20Namespace.png" alt="Test Email" width="300">
-
----
+Whatever you called your `namespace` in compute module config is how you import the module in code: `@<namespace>/computemodules`
 
 ```typescript
 import { sendEmail } from "@gmail/computemodules"; 
@@ -160,7 +156,7 @@ await sendEmail({
 ## Development
 
 > [!WARNING]
-> Due to the (my?)limitations of importing the Foundry Data Connection source locally the project has a test.js feature and some Compute Module initialization logic that only runs once you deploy the module.
+> Due to the limitations of importing the Foundry Data Connection source locally the project has a test.js feature and some Compute Module initialization logic that only runs once you deploy the module. (likely chance this was just a 'me' problem)
 
 ```bash
 # Local testing
@@ -184,7 +180,8 @@ Test completed successfully!
 ## Security
 
 > [!CAUTION]
-> - Never commit credentials
+> - Never commit credentials -- if you test locally name the 'secret' `service_account.json`
+> - Ensure .gitignore and .dockerignore are up to date
 > - Rotate keys regularly
 > - Monitor API usage
 > - Limit permissions
