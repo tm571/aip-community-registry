@@ -18,8 +18,8 @@
 1. **Setup Google Workspace**
    - Enable Gmail API in Google Cloud Console
    - Create service account with domain delegation
-   - Download credentials as JSON
    - Grant `https://www.googleapis.com/auth/gmail.send` scope
+   - Create/Download service account credentials as JSON
 
 2. **Prepare Credentials**
    ```bash
@@ -41,7 +41,15 @@
 <summary>Click to expand step-by-step instructions with screenshots</summary>
 
 ### 1. Google Workspace Setup
-![Service Account](images/[Step%203.a]%20Create%20Service%20Account%20Credentials.png)
+
+<table>
+<tr>
+<td>Create Service Account</td>
+</tr>
+<tr>
+<td><img src="images/[Step%203.a]%20Create%20Service%20Account%20Credentials.png" alt="Service Account Setup" width="600"></td>
+</tr>
+</table>
 
 ### 2. Foundry Configuration
 #### Data Connection
@@ -56,9 +64,19 @@
 <td>Name your API</td>
 </tr>
 <tr>
-<td><img src="images/[Step%205]%20Enable%20Exports.png" alt="Exports" width="250"></td>
-<td><img src="images/[Step%206]%20Enable%20relevant%20import%20rules.png" alt="Rules" width="250"></td>
-<td><img src="images/[Step%207]%20Name%20your%20Source's%20API.png" alt="Name API" width="250"></td>
+<td><img src="images/[Step%205]%20Enable%20Exports.png" alt="Exports" width="600"></td>
+<td><img src="images/[Step%206]%20Enable%20relevant%20import%20rules.png" alt="Rules" width="600"></td>
+<td><img src="images/[Step%207]%20Name%20your%20Source's%20API.png" alt="Name API" width="600"></td>
+</tr>
+</table>
+
+#### Secret Configuration
+<table>
+<tr>
+<td>Store Service Account</td>
+</tr>
+<tr>
+<td><img src="images/[Step%203.b]%20Store%20service%20account%20as%20JSON%20on%20Foundry%20Data%20Connection.png" alt="Store Secret" width="600"></td>
 </tr>
 </table>
 
@@ -69,16 +87,16 @@
 <td>Choose Functions mode</td>
 </tr>
 <tr>
-<td><img src="images/[Step%208]%20Create%20Compute%20Module.png" alt="Create Module" width="400"></td>
-<td><img src="images/[Step%209]%20Choose%20Functions%20Mode.png" alt="Functions" width="400"></td>
+<td><img src="images/[Step%208]%20Create%20Compute%20Module.png" alt="Create Module" width="600"></td>
+<td><img src="images/[Step%209]%20Choose%20Functions%20Mode.png" alt="Functions" width="600"></td>
 </tr>
 <tr>
 <td>Import data connection</td>
 <td>Build function</td>
 </tr>
 <tr>
-<td><img src="images/[Step%2010]%20Import%20Data%20Connection%20Source.png" alt="Import" width="400"></td>
-<td><img src="images/[Step%2011]%20Build%20a%20Compute%20Module%20backed%20function.png" alt="Build" width="400"></td>
+<td><img src="images/[Step%2010]%20Import%20Data%20Connection%20Source.png" alt="Import" width="600"></td>
+<td><img src="images/[Step%2011]%20Build%20a%20Compute%20Module%20backed%20function.png" alt="Build" width="600"></td>
 </tr>
 </table>
 
@@ -89,29 +107,29 @@
 <td>Deploy container</td>
 </tr>
 <tr>
-<td><img src="images/[Step%2012]%20Create%20artifact%20%26%20name%20image.png" alt="Artifact" width="400"></td>
-<td><img src="images/[Step%2013]%20Run%20commands%20to%20create:publish%20container%20%26%20code.png" alt="Deploy" width="400"></td>
+<td><img src="images/[Step%2012]%20Create%20artifact%20%26%20name%20image.png" alt="Artifact" width="600"></td>
+<td><img src="images/[Step%2013]%20Run%20commands%20to%20create:publish%20container%20%26%20code.png" alt="Deploy" width="600"></td>
 </tr>
 <tr>
 <td>Update configuration</td>
 <td>Verify deployment</td>
 </tr>
 <tr>
-<td><img src="images/[Step%2014]%20Update%20Config%20to%20point%20to%20image:tag.png" alt="Config" width="400"></td>
-<td><img src="images/[Step%2015]%20Confirm%20container:source%20added.png" alt="Verify" width="400"></td>
+<td><img src="images/[Step%2014]%20Update%20Config%20to%20point%20to%20image:tag.png" alt="Config" width="600"></td>
+<td><img src="images/[Step%2015]%20Confirm%20container:source%20added.png" alt="Verify" width="600"></td>
 </tr>
 </table>
 
 #### Final Steps
-<div align="center">
+<div align="left">
 <table>
 <tr>
 <td>Import Function</td>
 <td>Test Email</td>
 </tr>
 <tr>
-<td><img src="images/[Step%2017]%20ensure%20sendEmail%20is%20registered%20%26%20accept%20import.png" alt="Import Function" width="400"></td>
-<td><img src="images/[Step%2018]%20Test%20Email.png" alt="Test Email" width="400"></td>
+<td><img src="images/[Step%2017]%20ensure%20sendEmail%20is%20registered%20%26%20accept%20import.png" alt="Import Function" width="600"></td>
+<td><img src="images/[Step%2018]%20Test%20Email.png" alt="Test Email" width="600"></td>
 </tr>
 </table>
 </div>
@@ -120,10 +138,16 @@
 
 ## Usage
 
+Whatever you call your namespace is how you import the module in code
+
+<img src="images/[Step%2019]%20Usage%20Namespace.png" alt="Test Email" width="300">
+
+---
+
 ```typescript
 import { sendEmail } from "@gmail/computemodules"; 
 
-await SendEmail({
+await sendEmail({
   recipients: ['user@domain.com'],
   subject: 'Hello from Foundry!',
   message: '<h1>It works!</h1><p>Email sent via Gmail API.</p>'
@@ -135,7 +159,8 @@ await SendEmail({
 
 ## Development
 
-Due to the limitations of the Foundry Data Connection source, I was not able to dynamically fetch the service account credentials from Foundry, so the project has a test.js feature and some Compute Module initialization logic that only runs once you deploy the module.
+> [!WARNING]
+> Due to the (my?)limitations of importing the Foundry Data Connection source locally the project has a test.js feature and some Compute Module initialization logic that only runs once you deploy the module.
 
 ```bash
 # Local testing
@@ -167,13 +192,14 @@ Test completed successfully!
 ---
 
 <div align="center">
-  <h2>🚀 Part of <a href="https://www.youtube.com/@codestrap8031">Codestrap</a> CommsForge</h2>
+  <h3>🚀 Part of <a href="https://www.youtube.com/@codestrap8031">Codestrap</a> CommsForge</h3>
   
   <a href="https://www.youtube.com/watch?v=9Xjx6gdaQpY">
     <h3>🎥 Watch Demo</h3>
-    <img src="https://img.shields.io/youtube/views/9Xjx6gdaQpY?style=for-the-badge&logo=youtube&logoColor=red&color=white" alt="YouTube Views">
+    <img src="https://img.shields.io/youtube/views/9Xjx6gdaQpY?style=for-the-badge&logo=youtube&logoColor=red&color=white" alt="Watch Demo">
   </a>
 
-  Part of CommsForge - Open source for Palantir Developers (Q2 2025)  
+  Part of CommsForge - Open source for Palantir Developers (Q2 2025)
+
   *Ontology is all you need.*
 </div>

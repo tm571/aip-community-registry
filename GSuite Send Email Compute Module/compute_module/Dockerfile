@@ -4,7 +4,6 @@ FROM --platform=amd64 node:20
 
 # Set production environment variables
 ENV NODE_ENV=production
-ENV production=true
 
 WORKDIR /app
 
