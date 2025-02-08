@@ -102,7 +102,17 @@ The system operates in two modes:
 - Configure holiday detection parameters
 
 ## Screenshots/Demos
-[Screenshots and demos will be placed in the /images directory]
+
+### Mobile Interface
+![Mobile Interface](images/mobile.jpeg)
+
+### Holiday Effects Example - St. Patrick's Day
+![St Patrick's Day Effect 1](images/st patrick1.png)
+![St Patrick's Day Effect 2](images/st patrick2.png)
+
+### System Components
+![Agent Configuration](images/agent.png)
+![Light Controller Interface](images/light controller.png)
 
 ## License
 [Specify the license under which this project is released]
