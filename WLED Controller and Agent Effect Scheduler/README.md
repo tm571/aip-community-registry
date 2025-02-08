@@ -107,12 +107,12 @@ The system operates in two modes:
 ![Mobile Interface](images/mobile.jpeg)
 
 ### Holiday Effects Example - St. Patrick's Day
-![St Patrick's Day Effect 1](images/st patrick1.png)
-![St Patrick's Day Effect 2](images/st patrick2.png)
+![St Patrick's Day Effect 1](images/st%20patrick1.png)
+![St Patrick's Day Effect 2](images/st%20patrick2.png)
 
 ### System Components
 ![Agent Configuration](images/agent.png)
-![Light Controller Interface](images/light controller.png)
+![Light Controller Interface](images/light%20controller.png)
 
 ## License
 [Specify the license under which this project is released]
