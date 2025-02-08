@@ -2,7 +2,7 @@
 ![Light Controller Interface](images/light%20controller.png)
 
 ## Description
-A sophisticated Palantir Foundry application that brings intelligent control to WLED-enabled LED devices through the power of AI and automation. This project combines WLED's versatile LED control capabilities with Palantir's Agent and AIP (Artificial Intelligence Platform) to create an automated, context-aware lighting system that responds to holidays and special events.
+A sophisticated Palantir Foundry application that brings intelligent control to WLED-enabled LED devices through the power of AI and automation. This project combines WLED's versatile LED control capabilities with Palantir's Agent and AIP (Artificial Intelligence Platform) to create an automated, context-aware lighting system that responds to holidays.
 
 Key Features:
 - Automated holiday detection using AIP/LLMs
@@ -86,7 +86,7 @@ Access the React-based control interface to:
 The system operates in two modes:
 
 1. Holiday Mode:
-   - System checks current date against holiday database
+   - System checks current date against LLM prompting for holiday and effect detail if applicable.
    - Automatically selects appropriate effects for recognized holidays
    - Activates at sunset and deactivates at sunrise
    - Uses AIP to determine appropriate effects based on holiday context
