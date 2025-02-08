@@ -1,4 +1,5 @@
 # WLED Controller and Agent Effect Scheduler
+![Light Controller Interface](images/light%20controller.png)
 
 ## Description
 A sophisticated Palantir Foundry application that brings intelligent control to WLED-enabled LED devices through the power of AI and automation. This project combines WLED's versatile LED control capabilities with Palantir's Agent and AIP (Artificial Intelligence Platform) to create an automated, context-aware lighting system that responds to holidays and special events.
@@ -112,7 +113,6 @@ The system operates in two modes:
 
 ### System Components
 ![Agent Configuration](images/agent.png)
-![Light Controller Interface](images/light%20controller.png)
 
 ## License
 Copyright 2024 Palantir Technologies Inc.
