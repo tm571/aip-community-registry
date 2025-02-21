@@ -1,7 +1,8 @@
 # WLED Controller and Agent Effect Scheduler
+![Light Controller Interface](images/light%20controller.png)
 
 ## Description
-A sophisticated Palantir Foundry application that brings intelligent control to WLED-enabled LED devices through the power of AI and automation. This project combines WLED's versatile LED control capabilities with Palantir's Agent and AIP (Artificial Intelligence Platform) to create an automated, context-aware lighting system that responds to holidays and special events.
+A sophisticated Palantir Foundry application that brings intelligent control to WLED-enabled LED devices through the power of AI and automation. This project combines WLED's versatile LED control capabilities with Palantir's Agent and AIP (Artificial Intelligence Platform) to create an automated, context-aware lighting system that responds to holidays.
 
 Key Features:
 - Automated holiday detection using AIP/LLMs
@@ -85,7 +86,7 @@ Access the React-based control interface to:
 The system operates in two modes:
 
 1. Holiday Mode:
-   - System checks current date against holiday database
+   - System checks current date against LLM prompting for holiday and effect detail if applicable.
    - Automatically selects appropriate effects for recognized holidays
    - Activates at sunset and deactivates at sunrise
    - Uses AIP to determine appropriate effects based on holiday context
@@ -107,15 +108,26 @@ The system operates in two modes:
 ![Mobile Interface](images/mobile.jpeg)
 
 ### Holiday Effects Example - St. Patrick's Day
-![St Patrick's Day Effect 1](images/st patrick1.png)
-![St Patrick's Day Effect 2](images/st patrick2.png)
+![St Patrick's Day Effect 1](images/st%20patrick1.png)
+![St Patrick's Day Effect 2](images/st%20patrick2.png)
 
 ### System Components
 ![Agent Configuration](images/agent.png)
-![Light Controller Interface](images/light controller.png)
 
 ## License
-[Specify the license under which this project is released]
+Copyright 2024 Palantir Technologies Inc.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
 
 ## Contributing
 Please read the [Contributing Guidelines](../CONTRIBUTING.md) for details on submitting pull requests.
