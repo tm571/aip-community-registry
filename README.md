@@ -27,7 +27,7 @@ Community-built examples built with Palantir's AIP, showing practical implementa
 | 15 | [Geocoding with Nominatim](/Geocoding%20with%20Nominatim%20and%20Compute%20Modules/) | A production ready package to geocode addresses in bulk and realtime using Nominatim and Compute Modules 🌍 | Joseph Chotard |
 | 16 | [ASWF 2024 Hackathon - HADR Aid](/ASWF-2024Hackathon-HADRAid/) | Rapid response scenario for a fictional typhoon impacting Hawaii using the Ontology SDK and a react frontent application 🌀 | Elliott Hamilton |
 | 17 | [ASWF 2024 Hackathon - SARR APP](/ASWF-2024Hackathon-SARR/) | Rapid response scenario for a fictional typhoon impacting Hawaii using the Ontology SDK and a react frontent application 🌀 | Matthew Moellering |
-
+| 18 | [ElevenLabs Conversational Agent in Workshop Widget](/11labs%20Conversational%20AI%20Agent%20-%20Workshop%20Widget/) | Conversational AI agent workshop widget to provide an interface for 11 labs to interact with Foundry 🤖 | Joseph Chotard |
 
 
 ## Getting Started
