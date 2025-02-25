@@ -1,0 +1,12 @@
+{
+  "foundryUrl": "https://events.palantirfoundry.com",
+  "site": {
+    "application": "ri.third-party-applications.main.application.df430f25-3f64-47d5-96a2-f37727388e9e",
+    "directory": "./dist",
+    "autoVersion": {
+      "type": "git-describe",
+      "tagPrefix": ""
+    },
+    "uploadOnly": false
+  }
+}
