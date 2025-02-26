@@ -25,10 +25,15 @@ Community-built examples built with Palantir's AIP, showing practical implementa
 | 13 | [Fashion Assistant](/Fashion%20Assistant/) | A Computer Vision enabled SDK to suggest outfits by considering your current wardrobe contents, weather and personal preferences 👔 | Alexandre Calais | 
 | 14 | [OSDK Widget in Foundry](/OSDK%20Widget%20in%20Foundry/) | A tutorial for creating a custom widget in Workshop for third party libraries or other bespoke requirements 🖼️ | Matthew Steele | 
 | 15 | [Geocoding with Nominatim](/Geocoding%20with%20Nominatim%20and%20Compute%20Modules/) | A production ready package to geocode addresses in bulk and realtime using Nominatim and Compute Modules 🌍 | Joseph Chotard |
-| 16 | [ASWF 2024 Hackathon - HADR Aid](/ASWF-2024Hackathon-HADRAid/) | Rapid response scenario for a fictional typhoon impacting Hawaii using the Ontology SDK and a react frontent application 🌀 | Elliott Hamilton |
+| 16 | [ASWF 2024 Hackathon - HADR Aid](/ASWF-2024Hackathon-HADRAid/) | Rapid response scenario for a fictional typhoon impacting Hawaii using a live streaming pipeline, the Ontology SDK, and a react frontent application 🌀 | Elliott Hamilton |
 | 17 | [ASWF 2024 Hackathon - SARR APP](/ASWF-2024Hackathon-SARR/) | Rapid response scenario for a fictional typhoon impacting Hawaii using the Ontology SDK and a react frontent application 🌀 | Matthew Moellering |
 | 18 | [ElevenLabs Conversational Agent in Workshop Widget](/11labs%20Conversational%20AI%20Agent%20-%20Workshop%20Widget/) | Conversational AI agent workshop widget to provide an interface for 11 labs to interact with Foundry 🤖 | Joseph Chotard |
-
+| 19 | [Gmail Compute Module for Foundry](/GSuite_Send_Email_Compute_Module/) |  A compute module that sends emails via Gmail, using a domain wide delegated service account ✉️ | Christopher Knight |
+| 20 | [WLED Controller and Agent Effect Scheduler](/WLED%20Controller%20and%20Agent%20Effect%20Scheduler/) | Create an automated, context-aware lighting system that responds to holidays 🚨 | Michael Lau |
+| 21 | [Small Business Connector](/Small%20Business%20Connector/) | Connect with other like-minded people with suggestions driven with AIP by leveraging the semantics around your business 💼 | Jay Ambdakar |
+| 22 | [Feedback Loop with AIP Evals](/Feedback%20Loop%20with%20AIP%20Evals/) | Set up a feedback loop where end-users can flag AIP outputs, capturing their feedback in the Ontology. Then leverage that feedback in your AI development cycle by integrating it dynamically into AIP Evals 🔎 | Colton Rusch |
+| 23 | [Integrating a Server with Compute Modules](/Integrating%20a%20Server%20with%20Compute%20Modules/) | Integrate a server into a compute module for Geocoding 🌍 | Dan Perile |
+| 24 | [DevOps for AI Products](/DevOps%20for%20AI%20Products/) | Explore the ticketing workflow demoed at DevCon 2 and develop workflows using marketplace release management ⬆️ | Xinyi Wang |
 
 ## Getting Started
 
