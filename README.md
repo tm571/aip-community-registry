@@ -35,7 +35,8 @@ Community-built examples built with Palantir's AIP, showing practical implementa
 | 23 | [Integrating a Server with Compute Modules](/Integrating%20a%20Server%20with%20Compute%20Modules/) | Integrate a server into a compute module for Geocoding 🌍 | Dan Perile |
 | 24 | [DevOps for AI Products](/DevOps%20for%20AI%20Products/) | Explore the ticketing workflow demoed at DevCon 2 and develop workflows using marketplace release management ⬆️ | Xinyi Wang |
 | 25 | [OSDK with Media and Derived Properties](/Media%20and%20Derived%20Properties/) | Read and write media to the platform by using OSDK and calculate properties at runtime based on the values of other properties or links on objects | Christopher Jeganathan and Landon Carter |
-| 26 | [Push-Based Events](/Push-Based%20Events/) | Provide a mechanism for Foundry to listen to events produced by another system, jira in this example. | Austin Czarnecki |
+| 26 | [Push-Based Events](/Push-Based%20Events/) | Provide a mechanism for Foundry to listen to events produced by another system, jira in this example 👂 | Austin Czarnecki |
+| 27 | [Platform Governance App with Platform SDK](/Platform%20Governance%20App%20with%20Platform%20SDK/) | Use the Platform SDK to run transformations in code repositories that pull Foundry metadata (ie users, groups, resources) into datasets 👥 | Andrew Ro.chat |
 
 ## Getting Started
 
