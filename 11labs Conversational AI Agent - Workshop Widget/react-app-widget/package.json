@@ -13,8 +13,6 @@
   },
   "dependencies": {
     "@11labs/react": "^0.0.7",
-    "@osdk/client": "^2.0.13",
-    "@osdk/oauth": "^1.0.0",
     "@osdk/workshop-iframe-custom-widget": "^1.1.0",
     "@tailwindcss/vite": "^4.0.8",
     "react": "^18",

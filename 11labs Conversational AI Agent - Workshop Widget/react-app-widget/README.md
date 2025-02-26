@@ -1,5 +1,11 @@
 # eleven-labs-customer-support-demo
 
+# Before using
+
+1. Set your third party appId in `./foundry.config.json` under `site.application`. It should look like `ri.third-party-applications.main.application.xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxx`
+2. Set your foundry URL in `./foundry.config.json` under `foundryUrl`. It should start with `https://`
+
+# Intro
 This project was generated with [`@osdk/create-app`](https://www.npmjs.com/package/@osdk/create-app) and demonstrates using the Ontology SDK package `@eleven-labs-customer-support-demo/sdk` with React on top of Vite. Check out the [Vite](https://vitejs.dev/guide/) docs for further configuration.
 
 ## Developing locally
@@ -42,7 +48,3 @@ git push origin tag <x.y.z>
 ```
 
 By default, a new site version will be uploaded and deployed as the production version immediately. If instead, you prefer to only upload the version and manually deploy it as the production version later you can set the `site.uploadOnly` property in the `foundry.config.json` file to `true`.
-
-Production configuration is stored in `.env.production`. A default test is included in `env.test.ts` to verify your production environment variables which runs in Foundry CI whenever git tags are pushed by setting the environment variable `VERIFY_ENV_PRODUCTION=true`.
-
-If you did not yet register a subdomain for Foundry website hosting you will need to first do so and then fill in the `VITE_FOUNDRY_REDIRECT_URL` in `.env.production`. The configured OAuth client must also allow the auth callback on the subdomain as a redirect URL.
