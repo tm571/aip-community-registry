@@ -6,6 +6,8 @@ This workshop widget showcases how to use elevenlabs.io's react SDK from within 
 
 ![Iframe config](./images/iframe-config.png)
 
+This widget uses Palantir's [iframe custom widget](https://github.com/palantir/workshop-iframe-custom-widget) library, which is licensed under a proprietary Palantir license. Please visit https://github.com/palantir/workshop-iframe-custom-widget to view the license.
+
 ## Installation
 
 You can publish the code in `./react-app-widget` to your foundry instance and host it on a subdomain in the `Developer Console` app. If you want to use the same workshop and notional data as in the screenshots you can import the `./11labs_store.mkt.zip` file into marketplace for installation.
