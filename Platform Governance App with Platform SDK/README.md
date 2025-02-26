@@ -50,31 +50,14 @@ The first step is uploading your package to the Foundry Marketplace:
 
 ![Marketplace Interface](./../_static/upload_product_banner.png)
 
-### 2. Install the Package
+Before we can begin the installation process, we will need to setup our data connection source, which is a necessary input parameter.
 
-After upload, you'll need to install the package in your environment. For detailed instructions, see the [official Palantir documentation](https://www.palantir.com/docs/foundry/marketplace/install-product).
+### 2. Setting up the OAuth Application
 
-The installation process has four main stages:
-
-1. **General Setup**
-   - Configure package name
-   - Select installation location
-
-2. **Input Configuration**
-   - Configure any required inputs. If no inputs are needed, proceed to next step
-   - Check project documentation for specific input requirements
-
-3. **Content Review**
-   - Review resources to be installed such as Developer Console, the Ontology, and Functions
-
-4. **Validation**
-   - System checks for any configuration errors
-   - Resolve any flagged issues
-   - Initiate installation
-
-### 3. Setting up the OAuth Application
 First, navigate to the Developer Console to begin setting up the OAuth application.
+
 - Developer Console can be found at: `{enrollment-url}/workspace/developer-console`
+
 From there, click on "New Application".
 
 Enter an application name. Something like "Platform governance OAuth app" should work.
@@ -89,13 +72,15 @@ For Permissions, select Application permissions. This means we will be creating 
 
 From there, we can move on to review and then click create application! This will setup the OAuth application.
 
-### 4. Storing the client secret
+### 3. Storing the client secret
+
 Once you click create application, you will be prompted to store the client secret.  This is the password for the service user and should be stored somewhere private and secure (but accessible). 
 ![Client Secret Example](images/client-secret.png)
 
 If this password is lost, you will be able to generate a new password, but any places that use the existing password will need to be updated.
 
-### 5. Managing Oauth application permissions
+### 4. Managing Oauth application permissions
+
 Once your app is created, you should see an OAuth and Permissions page, which allows you to manage your application.
 
 At the very top of the page, you will see your client id. This is needed when authenticating with the service user. Speaking of service users, if you go into settings, you will now see your service user under the users section.
@@ -104,7 +89,8 @@ On this page, you can share your OAuth client with other groups and users. This 
 
 You can also add additional organizations at the bottom in the Application discovery section.
 
-### 6. Giving your service user appropriate permissions by adding it to a Foundry group
+### 5. Giving your service user appropriate permissions by adding it to a Foundry group
+
 Now that your OAuth application setup is complete, you can navigate to settings to see your service user.
 ![Navigating to Settings](images/settings.png)
 
@@ -115,10 +101,12 @@ At this point, a stack admin will need to get involved to add the service user t
 * Warning - the platform governance app will use this service users permissions to create an application that showcases resources, roles, and groups.  To avoid Foundry metadata from being exposed to people via the platform governance app who would not be able to see certain resources, users, and groups otherwise, this project should be locked down.
 * The easiest fix to avoid this potential data leakage is to permission the project to only be viewed by the same people in the group that the service user is a part of.
 
-### 7. Creating a REST source to store the service user's credentials
+### 6. Creating a REST source to store the service user's credentials
+
 Once the service user has been added to the correct group, we can create a REST source to store the service user's credentials.
 
 To do this, navigate to the Data connection app and click on New source.
+
 - Data connections app can be found at: `{enrollment-url}/workspace/data-ingestion-app/sources`
 
 The source we will be using here is the REST API source. (We can also use the generic source).
@@ -130,7 +118,8 @@ Name your source something appropriate, such as "Foundry source via service user
 
 ou can put this source in the platform governance project, or you can create a new project to store this source, depending on your stack's best practices and standards.
 
-In the connection details, we can skip the domain setup section, since this will be handled in the transforms with the Platform SDK.
+In the connection details, we can add stack URL in the domain setup section.  We don't need to add a primary auth method.
+![Domain Setup for Source](images/source-setup-domain.png)
 
 For Additional secrets, we will need to create two. One for the client ID, and one for the client secret. This is where we need to recall the client ID and secret that the OAuth application gave us. Name the client id secret "ClientId", and name the secret "ClientSecret".
 
@@ -141,24 +130,48 @@ Populate the domain with your stack's URL. The policy may need to be approved in
 
 Once the policy is added, there is only one more step. Go to the Code import configuration section, and make sure to allow this source to be imported into code repositories. You will also need to give the source an API name so that it can be referenced in code repositories.
 
-### 8. Adding your source to your Platform SDK transforms repository
-Now that your source is setup, we can go ahead and add it to our transforms repository.  The repository should be created automatically in a folder marked "logic".  It should be called "platform governance transforms".
+### 7. Install the Package
 
-First, we need to add our source to our transforms repository. On the left there is a panel marked External systems.  In there, we can add an existing connection.
+Once the source is setup, you'll need to install the package in your environment. For detailed instructions, see the [official Palantir documentation](https://www.palantir.com/docs/foundry/marketplace/install-product).
+
+The installation process has four main stages:
+
+1. **General Setup**
+   - Configure package name
+   - Select installation location
+
+2. **Input Configuration**
+   - Configure any required inputs.
+   - This is where you will select the source that you created.
+   - You will also need to select the schedule build cadence.  Hourly or daily is recommended.
+
+3. **Content Review**
+   - Review resources to be installed such as Developer Console, the Ontology, and Functions
+
+4. **Validation**
+   - System checks for any configuration errors
+   - Resolve any flagged issues
+   - Initiate installation
+
+### 8. Confirm your source is added to the Platform SDK transforms repository
+
+Now that your source is setup and the installation is complete, we can go ahead and make sure it is in our transforms repository.  To navigate to the transforms repository, you can click through to the installation overview, scroll down to the Repository section and find "platform governance transforms" there. The repository should be created automatically in a folder marked "logic".
+
+First, we need to make sure our source is added to our transforms repository. On the left there is a panel marked External systems.  In there, we should see our source listed.  If it is not listed, we can add an existing connection.
 ![Import Source](images/import-source.png)
 
 ### 9. Locate the foundry-platform-sdk package in the repository libraries panel
+
 Once the source is added, we also need to make sure the foundry-platform-sdk Conda package is added.
 
 In the libraries panel, search for and add foundry-platform-sdk.  If it is not installed, it will take a minute to install.
 ![Add Platform SDK](images/add-platform-sdk.png)
 
 ### 10. Go through all of the TODO comments in the code
+
 Now that all of the dependencies are checked off, we can finally look at the code!
 
 Start with the utils file.  This is where we create an authenticated client object that we will use in our other transforms.
-
-First, lets make sure to add our stack URL.
 
 Lets also make sure the client ID and secret are correct.
 
@@ -166,9 +179,10 @@ Once this is done, navigate to the users transform.  In here, we need to make su
 
 Make sure to do the same thing in the other files as well.
 
-Finally, you can build all of the transforms! While they are building, navigate back to the users tab to find a bonus todo item.
+Finally, you can build all of the transforms! To do so, click on each transform (there are three) and click the build button in the top right corner.  While they are building, navigate back to the users tab to find a bonus todo item.
 
 ### 11. Understanding the datasets (and ontology)
+
 The platform governance app deploys 5 datasets that are turned into ontology objects.  The model is as shown in this diagram:
 ![Data Model](images/data-model.png)
 
@@ -177,6 +191,7 @@ A group has many group members.  A group member can either be a group or a user.
 A resource is connected to groups and users via the resource roles dataset.  The resource roles dataset contains the group or user (principal) that has access to the resource, as well as the role that the principal has on that resource.  For example, the role may be owner, editor, viewer, or discoverer. Additionally, some resources may have a principal type of "Everyone", which represents all users.
 
 ### 12. Using the Platform Governance Application.
+
 Now that the transforms are built, you should be able to see the finished product in the platform governance application!
 
 If you aren't able to see any data, confirm that the transforms built correctly.  Also confirm that the ontology finished hydrating.
@@ -192,10 +207,13 @@ In the resources tab, you can click into a resource and see all users and groups
 Finally, in the linter alerts tab, you can see existing alerts. Alerts are a great way to ensure that your stack's resources, groups, and users are following hard-to-enforce rules and best practices.
 
 ### 13. Moving beyond: configuring new alerts!
+
 The platform governance app is only deployed with very basic alerts.  For example, an alert is thrown if the resource principal type "Everyone" has editor or owner access to a project, which is considered bad practice in most cases, since the project can be edited or manipulated by anyone with stack access.
 
 The alerts are created in a pipeline builder application.  To create additional alerts, follow the existing schema and union your alerts into the alerts dataset from within the pipeline.
+
 - Other common linter alerts entail making sure a group or user always have access to resources of a certain type.  For example, if your stack has a datasource admins group, you can setup an alert if that group does not have owner access to a resource of type "magritte source".
 
 Another common way to create alerts is via the Foundry Rules application.  Use the Foundry rules application if you want to have a frontend workshop widget to allow users to easily standup their own rules.
+
 - Foundry roles can be found at: `{enrollment-url}/workspace/foundry-rules`
