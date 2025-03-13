@@ -2,13 +2,15 @@
 
 ## AIP Community Registry
 
-Collection of community-built applications and projects leveraging Palantir's AIP Platform. This registry extends the [Build with Palantir](https://build.palantir.com) initiative with real-world implementations from developers using AIP in production.
+A list of awesome SDKs, frameworks, and workflows - built on Palantir AIP and contributed by our Developer Community.
 
-## Featured Solutions
+[Palantir AIP](https://www.palantir.com/platforms/aip/) is a modular and interoperable developer platform that enables the rapid deployment of AI integrated operations. 
 
-Community-built examples built with Palantir's AIP, showing practical implementations and integration patterns across different use cases.
+New to the platform? Sign up for a [free AIP Developer Account](https://signup.palantirfoundry.com/signup?signupPermitCode=BUILD_WITH_AIP&tracking-code=build.palantir.com) today.
 
-| # | Demo | Description | Contributed By |
+## Contributions
+
+| # | Demo | Description | Contributor |
 |---|------|-------------|----------------|
 | 1 | [OSDK 'Hello World' Project](/OSDK%20'Hello%20World'%20Project/) | A tutorial for using Python to take data from your Ontology and bring into a local Jupyter Lab notebook through the OSDK 🗳️ | Justin Langfan |
 | 2 | [Compute Module 'Hello World' Project](/Compute%20Module%20'Hello%20World'%20Project/) | A tutorial for using Compute Modules to take your organizations codebase and bring it into Foundry 💾 | Justin Langfan |
@@ -40,44 +42,30 @@ Community-built examples built with Palantir's AIP, showing practical implementa
 
 ## Getting Started
 
-### For Users
-1. Browse the solutions table above to find relevant examples
-2. Follow the [Installation Guide](INSTALLATION.md) to deploy package
-3. Refer to instructions found in the project folder for additional installtion and configuration steps
-
 ### For Contributors
-1. Send an [Email](aip-community-registry@palantir.com) with your contribution idea
-2. Fork this repository
-3. Copy the project [template structure](Template)
-4. Follow the contribution guidelines in [CONTRIBUTING.md](CONTRIBUTING.md)
+If you have built something impactful on AIP, please follow the instructions in [CONTRIBUTING.md](CONTRIBUTING.md) to get it added here!
 
-## Installation
+### For Users
+1. Browse the table above to find relevant examples
+2. Follow the [Installation Guide](INSTALLATION.md) to deploy the package to your Foundry environment
+3. Refer to instructions found in the project folder for any additional installation or configuration steps
 
-Each package in this registry includes a marketplace bundle that needs to be uploaded to your Foundry environment.
-
-⚠️ **Important**: Refer to [INSTALLATION.md](INSTALLATION.md) for general installation steps and troubleshooting.
-
-Quick Reference:
+#### Installation - Quick Reference:
 1. Download package `.zip` file
 2. Upload Zip File on your Dev Tier Enrollment. Note: Enterprise Users may need work with Platform Admins to enable manual uploads via Marketplace
 3. Follow package-specific configuration steps
 4. Configure SDK components (if applicable)
-
-## Resources
-
-- [Palantir Documentation](https://docs.palantir.com)
-- [Developer Forums](https://community.palantir.com)
 
 ## Security Guidelines
 
 - Never commit sensitive credentials or data
 - Follow security best practices
 
-## Support
+## Resources & Support
 
+- Docs: [Palantir Documentation](https://docs.palantir.com)
+- Questions: Use our [Developer Forum](https://community.palantir.com/tag/aip-community-registry)
 - Project issues: Create an issue in the relevant project directory
-- General questions: Use our [community forums](https://community.palantir.com)
-- Questions or Concerns: Contact aip-community-registry@palantir.com 
 
 ## License
 
