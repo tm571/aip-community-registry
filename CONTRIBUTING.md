@@ -1,11 +1,16 @@
-# Contributing to AIP-Community Registry
+# How to become a contributor
 
-## Submission Process
+We would love to accept your contributions to the AIP Community Registry!
 
-1. Fork this repository
-2. Package your resources following the template structure
-3. Submit your contribution via pull request
-4. We will review and approve as appropriate
+To become a contributor, please follow the process outlined below.
+
+## Adding a contribution to the registry
+
+1. Review & sign our [Build with AIP contribution agreement](https://ironcladapp.com/public-launch/675870ec03bd99fb86de81d9) 
+2. Fork this repository
+3. Package your resources following the template structure
+4. Submit your contribution via pull request
+5. We will review and, if aligned with our guidelines, merge!
 
 ## Project Requirements
 
@@ -56,9 +61,7 @@ Your project must follow our standard template structure:
 
 ## Questions?
 
-- Technical questions: Post in [community forums](https://community.palantir.com)
-- Submission status: Email aip-community-registry@palantir.com
-- General inquiries: Please Reach out to aip-community-registry@palantir.com
+Feel free to ask through in our [Developer community forum](https://community.palantir.com/tag/aip-community-registry)!
 
 ---
 
