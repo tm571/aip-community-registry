@@ -37,11 +37,9 @@ Once you have created, copy your CLIENT_ID and CLIENT_SECRET, you will need them
 
 You will need to specify the scopes required by Foundry in your client. Navigate to the “Data Access” section at [this link](https://console.cloud.google.com/auth/scopes), and add the following scopes:
 
-* https://www.googleapis.com/auth/Gmail.readonly
-* https://www.googleapis.com/auth/Gmail.compose
-* https://www.googleapis.com/auth/Gmail.send
-* https://www.googleapis.com/auth/calendar.readonly
+* https://www.googleapis.com/auth/gmail.modify
 * https://www.googleapis.com/auth/calendar
+
 
 #### Get refresh token
 
