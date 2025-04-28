@@ -33,6 +33,10 @@ Follow this link (https://console.cloud.google.com/auth/clients) to create a Goo
 
 Once you have created, copy your CLIENT_ID and CLIENT_SECRET, you will need them later. You can always access them at any time by viewing your client [here](https://console.cloud.google.com/auth/clients).
 
+#### Enable APIs
+
+Follow [this guide](https://support.google.com/googleapi/answer/6158841?hl=en) to enable the GMail and Calendar APIs for your client.
+
 #### Add relevant scopes
 
 You will need to specify the scopes required by Foundry in your client. Navigate to the “Data Access” section at [this link](https://console.cloud.google.com/auth/scopes), and add the following scopes:
@@ -53,18 +57,19 @@ The Marketplace package will require a Data Source with your google credentials 
 1. On your Foundry instance, create a new Data Connection REST API source. Config:
     1. Connection Type: Direct connection
     2. Domain base URL: googleapis.com
-    3. Define Additional Secrets
+    3. Authentication: None
+    4. Define Additional Secrets
         1. Name: “RefreshToken”, Value: copy and paste your refresh token from the step above Untitled
         2. Name: “ClientId”, Value: copy and paste your Client Id from Untitled
         3. Name: “ClientSecret”, Value: copy and paste your Client Secret Untitled
-    4. Network connectivity: add the following egress policies
+    5. Network connectivity: add the following egress policies
         1. gmail.googleapis.com (for Gmail API access)
         2. www.googleapis.com (for other services e.g. Calendar API access)
         3. oauth2.googleapis.com (for authentication)
         4. 
-    5. Code import configuration: toggle “Allow this source to be imported into code repositories”
-    6. Export configuration: toggle “Enable exports to this source”
-    7. Save
+    6. Code import configuration: toggle “Allow this source to be imported into code repositories” and “Allow this to be used in Compute Modules”
+    7. Export configuration: toggle “Enable exports to this source”
+    8. Save
 
 ## Upload Package to Your Enrollment
 
